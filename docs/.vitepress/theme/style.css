@@ -62,12 +62,20 @@ h3 { font-family: Montserrat, 'Arial Rounded MT Bold', Arial, sans-serif; font-s
 .option-two .card { background: white; }
 .option-two .evidence-panel, .option-two .resume-panel { background: white; }
 .option-two .nav-toggle { background: white; }
+.option-two-layout { display: grid; grid-template-columns: 13rem minmax(0, 1fr); max-width: 1500px; margin: 0 auto; }
+.option-two-content { min-width: 0; }
+.section-nav { align-self: start; display: grid; gap: .55rem; padding: 3rem 1rem; position: sticky; top: 0; }
+.section-nav a { border-left: 3px solid var(--orange); color: var(--indigo); font-family: Montserrat, 'Arial Rounded MT Bold', Arial, sans-serif; font-weight: 700; padding: .5rem .7rem; text-decoration: none; }
+.section-nav a:hover { background: white; }
 
 @media (max-width: 760px) {
   .nav { align-items: flex-start; flex-direction: column; }
   .nav-links { flex-wrap: wrap; }
   .about-cards, .card-grid, .link-grid, .skills, .project-columns { grid-template-columns: 1fr; }
   .evidence-list, .resume-list { grid-template-columns: 1fr; gap: .15rem; }
+  .option-two-layout { display: block; }
+  .section-nav { border-bottom: 2px solid var(--orange); display: flex; flex-wrap: wrap; padding: 1rem 1.25rem; position: static; }
+  .section-nav a { border-left: 0; border-bottom: 3px solid var(--orange); }
 }
 
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }

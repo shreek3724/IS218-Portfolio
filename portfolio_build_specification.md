@@ -178,6 +178,7 @@ Ensure you can complete these checks for the integrity of the site. Log check re
 ## Presentation Option 2 (Alternate — Single Scrollable Page)
 
 - **Behavior:** This presentation option is not a new website; it is the toggled alternative version of Option 1 using the exact same shared information and context. It renders as **one long scrollable page** with all information, and clicking NavBar buttons scrolls smoothly to the corresponding section of the page.
+- **Accessibility navigation:** Include a left-side navigation that links to the About Me, Projects, and Contact & Resume sections in the same way as the top NavBar.
 - **NavBar:**
   - **Left side:** `"PortfolioHome"` (leads back to the top/home section of Option 2) alongside buttons `"About Me"`, `"Projects"`, `"Contact & Resume"`, and `"Toggle Styles"`.
 - **Colors & Typography:**
