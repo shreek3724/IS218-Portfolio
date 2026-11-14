@@ -1,10 +1,10 @@
 <script setup lang="ts">
-defineProps<{ title: string }>()
+withDefaults(defineProps<{ title: string; showTitle?: boolean }>(), { showTitle: true })
 </script>
 
 <template>
   <article class="card">
-    <h2>{{ title }}</h2>
+    <h2 v-if="showTitle">{{ title }}</h2>
     <slot />
   </article>
 </template>

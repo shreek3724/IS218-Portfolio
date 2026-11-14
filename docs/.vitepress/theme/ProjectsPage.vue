@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { withBase } from 'vitepress'
 import { projects } from './content'
 import ContentCard from './ContentCard.vue'
 import PortfolioNav from './PortfolioNav.vue'
 
-const style = ref<'option-one' | 'option-two'>('option-one')
-const toggleStyle = () => { style.value = style.value === 'option-one' ? 'option-two' : 'option-one' }
 </script>
 
 <template>
-  <main :class="['portfolio', style]">
-    <PortfolioNav :style="style" @toggle="toggleStyle" />
+  <main class="portfolio option-one">
+    <PortfolioNav presentation="one" :toggle-href="withBase('/option-two#projects')" />
     <div class="page-shell">
       <h1>Projects</h1>
       <nav class="project-tabs" aria-label="Project sections">
