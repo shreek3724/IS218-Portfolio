@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, nextTick, ref } from 'vue'
 import { profile } from './content'
+import ContentCard from './ContentCard.vue'
+import PortfolioNav from './PortfolioNav.vue'
 
 const style = ref<'option-one' | 'option-two'>('option-one')
 const isOptionTwo = computed(() => style.value === 'option-two')
@@ -14,15 +16,7 @@ async function toggleStyle() {
 
 <template>
   <main :class="['portfolio', style]">
-    <nav class="nav" aria-label="Portfolio navigation">
-      <a class="brand" href="#about-me">PortfolioHome</a>
-      <div class="nav-links">
-        <a href="#about-me">About Me</a>
-        <button type="button" @click="toggleStyle" :aria-pressed="isOptionTwo">
-          Toggle Styles
-        </button>
-      </div>
-    </nav>
+    <PortfolioNav :style="style" @toggle="toggleStyle" />
 
     <section id="about-me" class="about" tabindex="-1">
       <header class="identity">
@@ -31,10 +25,9 @@ async function toggleStyle() {
       </header>
       <h1>About Me</h1>
       <div class="about-cards">
-        <article v-for="item in profile.about" :key="item.title" class="card">
-          <h2>{{ item.title }}</h2>
+        <ContentCard v-for="item in profile.about" :key="item.title" :title="item.title">
           <p>{{ item.text }}</p>
-        </article>
+        </ContentCard>
       </div>
       <a class="cta" href="mailto:sk3724@njit.edu">Contact &amp; Resume</a>
     </section>

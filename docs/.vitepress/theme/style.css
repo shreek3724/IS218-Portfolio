@@ -20,24 +20,38 @@ button, a { font: inherit; }
 .nav-links button { border: 2px solid var(--orange); border-radius: 999px; background: var(--butter); padding: .45rem .8rem; cursor: pointer; transition: transform .2s ease, background-color .28s ease; }
 .nav-links button:hover { transform: translateY(-1px); }
 .about { max-width: 1200px; margin: 0 auto; padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 4vw, 2rem); scroll-margin-top: 4rem; }
+.page-shell { max-width: 1200px; margin: 0 auto; padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 4vw, 2rem); }
 .identity { text-align: center; font-family: Montserrat, 'Arial Rounded MT Bold', Arial, sans-serif; font-weight: 700; }
 .identity p { margin: 0; font-size: clamp(2rem, 5vw, 3.4rem); }
 .identity span { display: block; margin-top: .35rem; font-size: clamp(1rem, 2vw, 1.25rem); }
 h1, h2 { font-family: Montserrat, 'Arial Rounded MT Bold', Arial, sans-serif; font-weight: 700; }
 h1 { margin: 3rem 0 1.5rem; font-size: clamp(2rem, 4vw, 3rem); }
 h2 { margin-top: 0; font-size: 1.35rem; }
+h3 { font-family: Montserrat, 'Arial Rounded MT Bold', Arial, sans-serif; font-size: 1rem; }
 .about-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 .card { border: 2px solid var(--orange); border-radius: 1rem; background: var(--butter); padding: 1.4rem; line-height: 1.6; transition: background-color .28s ease, transform .2s ease; }
 .card:hover { transform: translateY(-3px); }
+.project-tabs { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: 3rem; }
+.project-tabs a { border-radius: 999px; background: var(--indigo); color: white; padding: .65rem 1rem; font-weight: 700; text-decoration: none; }
+.project-section { scroll-margin-top: 2rem; padding: 2rem 0; }
+.project-section + .project-section { border-top: 2px solid var(--orange); }
+.eyebrow { margin-bottom: .4rem; font-weight: 700; }
+.subtitle { margin: -.8rem 0 1.5rem; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.evidence-panel, .resume-panel { margin-top: 1.5rem; border: 2px solid var(--orange); border-radius: 1rem; background: var(--butter); padding: 1.4rem; line-height: 1.6; transition: background-color .28s ease; }
+.contact-section + .contact-section { margin-top: 4rem; }
+.link-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+.placeholder { margin-bottom: 0; color: #4a5688; font-style: italic; }
 .cta { display: inline-block; margin-top: 2rem; border-radius: .6rem; background: var(--indigo); color: white; padding: .75rem 1.1rem; font-weight: 700; text-decoration: none; }
 .option-two { background: var(--butter); }
 .option-two .card { background: white; }
+.option-two .evidence-panel, .option-two .resume-panel { background: white; }
 .option-two .nav-links button { background: white; }
 
 @media (max-width: 760px) {
   .nav { align-items: flex-start; flex-direction: column; }
   .nav-links { flex-wrap: wrap; }
-  .about-cards { grid-template-columns: 1fr; }
+  .about-cards, .card-grid, .link-grid { grid-template-columns: 1fr; }
 }
 
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
