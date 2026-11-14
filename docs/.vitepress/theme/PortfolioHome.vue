@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, nextTick, ref } from 'vue'
+import { withBase } from 'vitepress'
 import { profile } from './content'
 import ContentCard from './ContentCard.vue'
 import PortfolioNav from './PortfolioNav.vue'
@@ -29,7 +30,7 @@ async function toggleStyle() {
           <p>{{ item.text }}</p>
         </ContentCard>
       </div>
-      <a class="cta" href="mailto:sk3724@njit.edu">Contact &amp; Resume</a>
+      <a class="cta" :href="withBase('/contact-resume')">Contact &amp; Resume</a>
     </section>
   </main>
 </template>

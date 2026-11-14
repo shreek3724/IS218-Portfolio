@@ -16,3 +16,12 @@ The remaining integrity checks apply to later project, résumé, and external-li
 - **Mobile / narrow viewport — Passed for the new Projects page:** At a 375px viewport, project cards rendered as one column and page width remained 375px, with no horizontal overflow.
 - **Build and browser errors — Passed:** `npm run build` completed successfully and the local browser preview reported no console errors.
 - **Alternate presentation behavior — Deferred to Step 4:** The Toggle Styles foundation remains available, but Option 2's distinct single-scroll layout and matching-section transitions cannot be fully tested until its structure exists.
+
+## 2026-11-14 — Step 3 checks
+
+- **Production build — Passed:** `npm run build` completed successfully and generated the About Me, Projects, Contact & Resume, and résumé PDF output files.
+- **Shared-content and structural check — Passed:** The case-study, contact, and résumé content are rendered from the shared content module. Step 2 placeholder text is absent from source pages.
+- **Contact & Resume route — Passed:** The About Me CTA and the navigation link both target the internal Contact & Resume route.
+- **Résumé asset integrity — Passed:** The downloadable résumé PDF has the same SHA-256 checksum as the user-provided source PDF.
+- **Link availability — Partially passed:** GitHub profile, portfolio repository, and deployed portfolio returned HTTP 200. LinkedIn returned HTTP 999, LinkedIn's automated-request block, so it requires manual browser verification.
+- **Visual and keyboard checks — Deferred by request:** No browser visual or interactive testing was performed during Step 3 to conserve usage. These checks remain for the final verification stage.
