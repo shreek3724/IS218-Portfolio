@@ -42,3 +42,8 @@ The remaining integrity checks apply to later project, résumé, and external-li
 - **2026-11-14 — Attribution & Limits Check — Passed:** Both case studies label AI/starter assistance, describe the personal individual project status, identify group responsibilities as TBD, and disclose unfinished work and planned work honestly.
 - **2026-11-14 — Inspectable Evidence Check — Passed:** Every currently linked internal route and downloadable résumé asset loaded successfully. Case-study evidence links are explicitly marked `TBD - Will be added`, so no unimplemented evidence link is presented as working.
 - **2026-11-14 — Professional Materials Check — Passed:** The Contact & Resume areas include the verified résumé and downloadable PDF, GitHub profile, LinkedIn URL, portfolio repository, and email contact route. The résumé download matches the source PDF checksum.
+
+## 2026-11-17 — Navigation and résumé control update
+
+- **2026-11-17 — Build and navigation check — Passed:** `npm run build` completed successfully. Generated Option 1 pages include a Contact & Links header link to the internal contact-links anchor; Option 2 includes the same top navigation link and a fourth left-side Contact & Links link.
+- **2026-11-17 — Résumé control check — Passed:** Both presentations render the résumé download as a high-contrast button-styled link while preserving its valid PDF target.

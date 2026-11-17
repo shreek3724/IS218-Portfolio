@@ -12,6 +12,7 @@ const href = (one: string, two: string) => props.presentation === 'one' ? withBa
       <a :href="href('/', '#about-me')">About Me</a>
       <a :href="href('/projects', '#projects')">Projects</a>
       <a :href="href('/contact-resume', '#contact-resume')">Contact &amp; Resume</a>
+      <a :href="href('/contact-resume#contact-links', '#contact-links')">Contact &amp; Links</a>
       <a class="nav-toggle" :href="toggleHref">Toggle Styles</a>
     </div>
   </nav>

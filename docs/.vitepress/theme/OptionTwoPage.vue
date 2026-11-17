@@ -8,7 +8,7 @@ import PortfolioNav from './PortfolioNav.vue'
 import ResumeContent from './ResumeContent.vue'
 
 const hash = ref('#about-me')
-const routes: Record<string, string> = { '#projects': '/projects', '#contact-resume': '/contact-resume' }
+const routes: Record<string, string> = { '#projects': '/projects', '#contact-resume': '/contact-resume', '#contact-links': '/contact-resume#contact-links' }
 const toggleHref = computed(() => withBase(routes[hash.value] || '/'))
 const updateHash = () => { hash.value = window.location.hash || '#about-me' }
 
@@ -20,7 +20,7 @@ onUnmounted(() => window.removeEventListener('hashchange', updateHash))
   <main class="portfolio option-two option-two-page">
     <PortfolioNav presentation="two" :toggle-href="toggleHref" />
     <div class="option-two-layout">
-      <aside class="section-nav" aria-label="Option 2 section navigation"><a href="#about-me">About Me</a><a href="#projects">Projects</a><a href="#contact-resume">Contact &amp; Resume</a></aside>
+      <aside class="section-nav" aria-label="Option 2 section navigation"><a href="#about-me">About Me</a><a href="#projects">Projects</a><a href="#contact-resume">Contact &amp; Resume</a><a href="#contact-links">Contact &amp; Links</a></aside>
       <div class="option-two-content">
     <section id="about-me" class="scroll-section about-two" tabindex="-1">
       <header class="identity"><p>{{ profile.name }}</p><span>{{ profile.program }}</span></header>
@@ -41,7 +41,7 @@ onUnmounted(() => window.removeEventListener('hashchange', updateHash))
     <section id="contact-resume" class="scroll-section" tabindex="-1">
       <h1>Contact &amp; Resume</h1>
       <section class="contact-section"><h2>Resume</h2><ResumeContent /></section>
-      <section class="contact-section"><h2>Contact &amp; Links</h2><ContactLinks /></section>
+      <section id="contact-links" class="contact-section" tabindex="-1"><h2>Contact &amp; Links</h2><ContactLinks /></section>
     </section>
       </div>
     </div>
