@@ -4,6 +4,7 @@ import { withBase } from 'vitepress'
 import { profile, projects } from './content'
 import ContactLinks from './ContactLinks.vue'
 import ContentCard from './ContentCard.vue'
+import GameEvidence from './GameEvidence.vue'
 import PortfolioNav from './PortfolioNav.vue'
 import ResumeContent from './ResumeContent.vue'
 
@@ -33,7 +34,7 @@ onUnmounted(() => window.removeEventListener('hashchange', updateHash))
     <section id="projects" class="scroll-section" tabindex="-1">
       <h1>Projects</h1>
       <div class="project-columns">
-        <section aria-labelledby="individual-title"><p class="eyebrow">Individual Project</p><h2 id="individual-title">{{ projects.individual.title }}</h2><p class="subtitle">{{ projects.individual.subtitle }}</p><div class="stacked-cards"><ContentCard v-for="card in projects.individual.cards" :key="card.title" :title="card.title"><p v-if="card.text">{{ card.text }}</p><ul v-else><li v-for="item in card.bullets" :key="item">{{ item }}</li></ul></ContentCard></div><div class="evidence-panel"><h3>Check it Out</h3><dl class="evidence-list"><template v-for="[label, value] in projects.individual.links" :key="label"><dt>{{ label }}</dt><dd>{{ value }}</dd></template></dl><h3>Honest Status</h3><p>{{ projects.individual.status }}</p></div></section>
+        <section aria-labelledby="individual-title"><p class="eyebrow">Individual Project</p><h2 id="individual-title">{{ projects.individual.title }}</h2><p class="subtitle">{{ projects.individual.subtitle }}</p><div class="stacked-cards"><ContentCard v-for="card in projects.individual.cards" :key="card.title" :title="card.title"><p v-if="card.text">{{ card.text }}</p><ul v-else><li v-for="item in card.bullets" :key="item">{{ item }}</li></ul></ContentCard></div><div class="evidence-panel"><GameEvidence /></div></section>
         <section aria-labelledby="group-title"><p class="eyebrow">Customer Project</p><h2 id="group-title">{{ projects.group.title }}</h2><p class="subtitle">{{ projects.group.subtitle }}</p><div class="stacked-cards"><ContentCard v-for="card in projects.group.cards" :key="card.title" :title="card.title"><p>{{ card.text }}</p></ContentCard></div><div class="evidence-panel"><h3>Check it Out</h3><dl class="evidence-list"><template v-for="[label, value] in projects.group.links" :key="label"><dt>{{ label }}</dt><dd>{{ value }}</dd></template></dl><h3>Honest Status</h3><p>{{ projects.group.status }}</p></div></section>
       </div>
     </section>

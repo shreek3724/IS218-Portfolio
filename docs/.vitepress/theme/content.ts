@@ -26,8 +26,15 @@ export const projects = {
       { title: 'Built So Far', text: 'So far, the first working demo, or "slice," is in progress. The game plans have been made, including its UI, the data flow, game logic, and standard gameplay loop, among others.' },
       { title: 'Learning', bullets: ['The process of spec-driven development.', 'How to construct data flows and game mechanic flows.', 'How to design gameplay loops and game logic.'] }
     ],
-    links: [['GitHub Repo', 'TBD - Will be added'], ['Working First Slice Demo', 'TBD - Will be added'], ['Checks & Tests', 'TBD - Will be added']],
-    status: 'Currently working on building the spec for the first slice and planning the game development, implementation, and logic for the first slice. Steps after this have not begun yet. The final game integration is still unfinished, the final game logic is still unfinished, and the game repository has not been created yet.'
+    links: [
+      ['GitHub Repo', ['https://github.com/shreek3724/IS218CreativeGameSlice2']],
+      ['Working First Slice Demo', ['https://shreek3724.github.io/IS218CreativeGameSlice2/']],
+      ['Checks & Tests', [
+        'https://github.com/shreek3724/IS218CreativeGameSlice2/actions/runs/44396434131/job/135127455493',
+        'https://github.com/shreek3724/IS218CreativeGameSlice2/actions/runs/44396434131'
+      ]]
+    ] as const,
+    status: 'Built out the first slice of the game. This covers a simulated sign in, gameplay loop, view saved results, and sign out. This will be expanded to build out the final game.'
   },
   group: {
     title: 'To Be Decided',

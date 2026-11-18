@@ -2,6 +2,7 @@
 import { withBase } from 'vitepress'
 import { projects } from './content'
 import ContentCard from './ContentCard.vue'
+import GameEvidence from './GameEvidence.vue'
 import PortfolioNav from './PortfolioNav.vue'
 
 </script>
@@ -27,10 +28,7 @@ import PortfolioNav from './PortfolioNav.vue'
           </ContentCard>
         </div>
         <section class="evidence-panel" aria-labelledby="individual-evidence">
-          <h3 id="individual-evidence">Check it Out</h3>
-          <dl class="evidence-list"><template v-for="[label, value] in projects.individual.links" :key="label"><dt>{{ label }}</dt><dd>{{ value }}</dd></template></dl>
-          <h3>Honest Status</h3>
-          <p>{{ projects.individual.status }}</p>
+          <GameEvidence />
         </section>
       </section>
 
