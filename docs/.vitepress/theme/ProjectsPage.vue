@@ -41,7 +41,15 @@ import PortfolioNav from './PortfolioNav.vue'
         </div>
         <section class="evidence-panel" aria-labelledby="group-evidence">
           <h3 id="group-evidence">Check it Out</h3>
-          <dl class="evidence-list"><template v-for="[label, value] in projects.group.links" :key="label"><dt>{{ label }}</dt><dd>{{ value }}</dd></template></dl>
+          <dl class="evidence-list">
+            <template v-for="{ label, url, text } in projects.group.links" :key="label">
+              <dt>{{ label }}</dt>
+              <dd>
+                <a v-if="url" :href="url">{{ url }}</a>
+                <template v-else>{{ text }}</template>
+              </dd>
+            </template>
+          </dl>
           <h3>Honest Status</h3>
           <p>{{ projects.group.status }}</p>
         </section>

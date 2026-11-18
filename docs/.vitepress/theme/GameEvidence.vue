@@ -10,7 +10,7 @@ const { links, status } = projects.individual
   <dl class="evidence-list">
     <template v-for="[label, urls] in links" :key="label">
       <dt>{{ label }}</dt>
-      <dd class="evidence-links">
+      <dd>
         <template v-for="(url, index) in urls" :key="url">
           <span v-if="index > 0"> &amp; </span><a :href="url">{{ url }}</a>
         </template>
@@ -31,10 +31,6 @@ const { links, status } = projects.individual
 </template>
 
 <style scoped>
-.evidence-links {
-  overflow-wrap: anywhere;
-}
-
 .game-preview {
   width: 50%;
   height: auto;

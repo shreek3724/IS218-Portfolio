@@ -37,15 +37,19 @@ export const projects = {
     status: 'Built out the first slice of the game. This covers a simulated sign in, gameplay loop, view saved results, and sign out. This will be expanded to build out the final game.'
   },
   group: {
-    title: 'To Be Decided',
+    title: 'Bench & Bolt · Repair Inquiry Queue',
     subtitle: 'Group Project Case Study with AI/ Starter Assistance',
     cards: [
-      { title: 'Summary', text: 'TBD - Will be added. The project has not begun yet, as group member divisions are yet to be made, and the project is yet to be discussed in class with the professor. Progress, including what is to be built and the plan, will be added.' },
-      { title: 'My Responsibilities', text: 'TBD - Will be added' },
-      { title: 'Teammate Responsibilities', text: 'TBD - Will be added' }
+      { title: 'Summary', text: 'Building a customer queue intake for a business in need of a way to track their customers, orders and repairs easily and conveniently.' },
+      { title: 'My Responsibilities', text: "Coordinator queue: decide what the coordinator sees · build queue page from Dhruvi's records · connect intake → queue · test submit-to-queue path (S2)" },
+      { title: 'Teammate Responsibilities', text: "Ann (Anya): Intake form: decide what the coordinator enters and how errors show · build form + submission route using validate_inquiry · test a valid submission and a blank problem (S1) & Dhruvi: SQLite storage: define what's saved · save/retrieve, assign ID, set initial status · test retrieval after restart (S2)" }
     ],
-    links: [['GitHub Repo', 'TBD - Will be added'], ['Working First Slice Demo', 'TBD - Will be added'], ['Checks, Tests & Issues', 'TBD - Will be added']],
-    status: 'The project has not begun yet, as group member divisions are yet to be made, and the project is yet to be discussed in class with the professor. Progress, including what is to be built and the plan, will be added.'
+    links: [
+      { label: 'GitHub Repo', url: 'https://github.com/apink634/is218-bench-bolt' },
+      { label: 'Working First Slice Demo', text: 'TBD - Will be added' },
+      { label: 'Checks, Tests & Issues', url: 'https://github.com/apink634/is218-bench-bolt/actions/runs/44225587827' }
+    ],
+    status: 'Project responsibilities have been decided between team members, and research work has been completed, along with a record and a spec document. First working slice will be worked on.'
   }
 }
 
